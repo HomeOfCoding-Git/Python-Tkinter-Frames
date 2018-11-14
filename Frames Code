@@ -1,0 +1,86 @@
+'''
+From Tkinter Frames Tutorial on YouTube
+Home Of Coding
+
+Tweet:
+@HomeOfCoding
+
+Email:
+HomeOfCoding@gmail.com
+'''
+
+# You can remove above 
+
+from tkinter import *
+
+
+# root
+root = Tk()
+root.title("Frames Template")
+root.minsize(700,600)
+
+# __________________________________________________________________________________________ #####
+# Top Frame (inside root window)
+top_frame = Frame(root)
+top_frame.pack(side="top", fill="both", expand=True)
+
+# Left Frame (inside top_frame) ______________________________________________ #####
+left_frame = Frame(top_frame, bg="#234234")
+left_frame.pack(side="left", fill="both", expand=True)
+
+# List Box (inside left_frame) ________________________________________ List Box
+list_box = Listbox(left_frame, width=30, height=18, borderwidth=5, bg="#456456", fg="#fff")
+list_box.pack(side="top", pady=(90,30))
+
+# Left Bottom Frame (inside left_frame) ________________________________________
+left_bottom_frame = Frame(left_frame, bg="#234234")
+left_bottom_frame.pack(side="left", fill="both", expand=True)
+
+# Remove Button (inside left_bottom_frame) _____________________________________________ Remove Button
+remove_btn = Button(left_bottom_frame, text="Remove", width=8, bg="#345345", fg="#fff", font="arial 14", relief="flat")
+remove_btn.pack(side="left", padx=(0,2), pady=(10,20), expand=True, anchor="e")
+
+# Right Bottom Frame (inside left_frame) _______________________________________
+right_bottom_frame = Frame(left_frame, bg="#234234")
+right_bottom_frame.pack(side="left", fill="both", expand=True)
+
+# Add Button (inside right_bottom_frame) ______________________________________________ Add Button
+add_btn = Button(right_bottom_frame, text="Add", width=8, bg="#345345", fg="#fff", font="arial 14", relief="flat")
+add_btn.pack(side="left", padx=(2,0), pady=(10,20), expand=True, anchor="w")
+
+# Right Frame (inside top_frame) ________________________________________________________________ #####
+right_frame = Frame(top_frame, bg="#456456")
+right_frame.pack(side="left", fill="both", expand=True)
+
+# Right Top Frame (inside right_frame) ______________________________________
+right_top_frame = Frame(right_frame, bg="#234234")
+right_top_frame.pack(side="top", fill="both", expand=True)
+
+# Title Label (inside right_top_frame)
+title_label = Label(right_top_frame, text="Title", bg="#234234", fg="#fff", font="arial 14")
+title_label.pack(pady=(90,30))
+
+# Right Middle Frame (inside right_frame) ____________________________________
+right_mid_frame = Frame(right_frame, bg="#345345")
+right_mid_frame.pack(side="top", fill="both", expand=True)
+
+# Right Bottom Frame (inside right_frame) ____________________________________
+right_bott_frame = Frame(right_frame, bg="#456456")
+right_bott_frame.pack(side="bottom", fill="both", expand=True)
+
+# __________________________________________________________________________________________ #####
+# Bottom Frame (inside root window)
+bottom_frame = Frame(root)
+bottom_frame.pack(side="bottom", fill="both", expand=True)
+
+# Lower Frame (inside bottom_frame) _______________________________________
+lower_frame = Frame(bottom_frame, bg="#345345")
+lower_frame.pack(side="left", fill="both", expand=True)
+
+# Status Bar (inside lower_frame)
+status_bar = Label(lower_frame, text="Status Bar", bg="#345345", fg="#fff", font="arial 18")
+status_bar.pack(side="left", padx=(10,0))
+
+# __________________________________________________________________________________________
+root.mainloop()
+
